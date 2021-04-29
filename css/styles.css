@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  background: var(--color-light-gray);
+  font-size: 15px;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.component {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 5em auto;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.card-sedan {
+  --card-color: var(--color-card-orange);
+}
+
+.card-suv {
+  --card-color: var(--color-card-cyan);
+}
+
+.card-luxury {
+  --card-color: var(--color-card-dark-cyan);
+}
+
+.card {
+  background: var(--card-color);
+  padding: 3rem;
+  width: 305px;
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.card:first-of-type {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card:last-of-type {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.card-image {
+  flex: 0 0;
+}
+
+.card-title {
+  color: var(--color-light-gray);
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  flex: 0 0;
+  margin: 1.2em 0 1em;
+}
+
+.card-content {
+  color: var(--color-trans-white);
+  line-height: 1.75;
+  font-size: 0.9em;
+  flex: 1 1;
+  margin-bottom: 2em;
+}
+
+.card-button button {
+  border: 0.2em solid var(--color-light-gray);
+  background: var(--color-light-gray);
+  color: var(--card-color);
+  padding: 0.9em 2em;
+  border-radius: 2em;
+  font-weight: 700;
+  font-size: 0.9em;
+  flex: 0 0;
+}
+
+.card-button button:hover {
+  background: #0000;
+  color: var(--color-light-gray);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 950px) {
+  .component {
+    flex-direction: row;
+  }
+  .card:first-of-type {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .card:last-of-type {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .card-title {
+    font-size: 1.7em;
+  }
+
+  .card-content {
+    font-size: 1em;
+    margin-bottom: 5em;
+  }
+
+  .card-button button {
+    font-size: 1em;
+  }
+}
