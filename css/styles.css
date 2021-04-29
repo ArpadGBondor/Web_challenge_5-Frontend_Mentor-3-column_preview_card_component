@@ -101,6 +101,7 @@ p {
 .card-button button:hover {
   background: #0000;
   color: var(--color-light-gray);
+  cursor: pointer;
 }
 
 .attribution {
